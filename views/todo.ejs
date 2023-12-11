@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+</head>
+<body>
+    <h1>TODOS</h1>
+    
+    <% for(let key in todoData) { %>
+        <h3><%= key %></h3>
+        <ol>
+            <% for(let todo of todoData[key]) { %>
+            <li><%= todo %></li>
+            <% } %>
+        </ol>
+    <% } %>
+    
+    <br>
+    <br>
+    <form action="/todo/new">
+        <button>Create a new TODO</button>
+    </form>
+    <br>
+    <form action="/todo/delete">
+        <button>Delete a TODO</button>
+    </form>
+</body>
+</html>
